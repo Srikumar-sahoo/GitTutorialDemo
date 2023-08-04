@@ -1,0 +1,231 @@
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning
+$ git init
+Initialized empty Git repository in C:/Users/OMM/Desktop/GitLearning/.git/
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        First.txt
+        firstly.pptx
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --sparse              allow updating entries outside of the sparse-checkout cone
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git add --a
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   First.txt
+        new file:   firstly.pptx
+
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git commit -m "Intial Commit"
+[master (root-commit) 62222e6] Intial Commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 First.txt
+ create mode 100644 firstly.pptx
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git log
+commit 62222e6f90f76f44d346d69a1101e8d0bd968991 (HEAD -> master)
+Author: Srikumar <srikumars810@gmail.com>
+Date:   Sat Jul 29 20:02:43 2023 +0530
+
+    Intial Commit
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   First.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   First.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   First.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git add first.txt
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ fit status
+bash: fit: command not found
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   First.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git add First.txt
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   First.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.xlsx
+
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git commit -m "Changed first.txt and added better design"
+[master c7791c3] Changed first.txt and added better design
+ 1 file changed, 1 insertion(+)
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.xlsx
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git add --a
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   first.xlsx
+
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git commit -m "This is modeified"
+[master bfbfab9] This is modeified
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.xlsx
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git lg
+git: 'lg' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$ git log
+commit bfbfab9bef1ab9d7d5416261efe7509e62d675d8 (HEAD -> master)
+Author: Srikumar <srikumars810@gmail.com>
+Date:   Sat Jul 29 20:12:45 2023 +0530
+
+    This is modeified
+
+commit c7791c3da862e17d9bfa3c639052f12fe8c36809
+Author: Srikumar <srikumars810@gmail.com>
+Date:   Sat Jul 29 20:10:47 2023 +0530
+
+    Changed first.txt and added better design
+
+commit 62222e6f90f76f44d346d69a1101e8d0bd968991
+Author: Srikumar <srikumars810@gmail.com>
+Date:   Sat Jul 29 20:02:43 2023 +0530
+
+    Intial Commit
+
+OMM@DESKTOP-ARDBM13 MINGW64 ~/Desktop/GitLearning (master)
+$
+
+changing First
+
+Changing again
